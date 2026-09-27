@@ -1,23 +1,66 @@
 aid: bellaroseapparel
+
 name: Bellaroseapparel
-description: 'Bellaroseapparel is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Bella Rose Apparel is a professional apparel manufacturer based in India, operating since 2007 with facilities in Bangladesh, China, UAE, USA and Hong Kong. The company offers global sourcing, quality control, and a range of knitted and woven wear products, serving international markets through its group of companies and sales partners.'
+
 url: https://raw.githubusercontent.com/api-evangelist/bellaroseapparel/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-27'
+
 modified: '2026-09-27'
+
 tags:
-- Company
-apis: []
+- Apparel
+- Manufacturing
+- India
+- Global Sourcing
+- Textile
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/bellaroseapparel-hosts.yml
+- type: Vendors
+  url: vendors/bellaroseapparel-vendors.yml
+- type: DomainSecurity
+  url: security/bellaroseapparel-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/bellaroseapparel
+  url: https://bellaroseapparel.com
+
+- type: Image
+  url: https://bellaroseapparel.com/wp-content/uploads/2022/06/logo9.png
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-09-27'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://equityzen.com/company/bellaroseapparel
+    status: 403
+x-enrichment:
+  date: '2026-09-27'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
